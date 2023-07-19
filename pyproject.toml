@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "nilmtk-algorithms"
+version = "0.1.0"
+description = "Disaggregation algorithm compatible with NILMTK API"
+authors = ["Emilio J. Palacios-Garcia <emiliojose.palaciosgarcia@kuleuven.be>"]
+readme = "README.md"
+packages = [{include = "nilmtk_algorithms"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+nilmtk = {git = "git@gitlab.esat.kuleuven.be:premises/nilmtk-base.git"}
+hmmlearn = "^0.3.0"
+pandas = "^2.0.3"
+scikit-learn = "^1.3.0"
+scipy = "^1.11.1"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.4.1"
+black = "^23.7.0"
+isort = "^5.12.0"
+
+
+[tool.poetry.group.test.dependencies]
+nose = "^1.3.7"
+coverage = "^7.2.7"
+
+[tool.coverage.run]
+source = ["nilmtk"]
+
+[tool.coverage.report]
+omit = [ 
+    "*/python?.?/*",
+    "*/site-packages/nose/*",
+    "*nilmtk/notebooks/*"
+]
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = [
+    "nilmtk.*",
+    "hmmlearn.*",
+    "sklearn.*",
+    "scipy.*"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
