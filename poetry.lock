@@ -764,9 +764,9 @@ six = "*"
 
 [package.source]
 type = "git"
-url = "git@gitlab.esat.kuleuven.be:premises/nilmtk-metadata.git"
+url = "https://github.com/ejpalacios/nilm_metadata.git"
 reference = "HEAD"
-resolved_reference = "a0758b6075d584ffcd50e5ca7d3c900e991d5cf1"
+resolved_reference = "f5d345976e0fdd910f7d8d31b43edb23725e3fd2"
 
 [[package]]
 name = "nilmtk"
@@ -780,7 +780,7 @@ develop = false
 [package.dependencies]
 matplotlib = "^3.7.2"
 networkx = "^3.1"
-nilm-metadata = {git = "git@gitlab.esat.kuleuven.be:premises/nilmtk-metadata.git"}
+nilm-metadata = {git = "https://github.com/ejpalacios/nilm_metadata.git"}
 numpy = "^1.25.1"
 pandas = "^2.0.3"
 pytz = "^2023.3"
@@ -791,9 +791,9 @@ tables = "^3.8.0"
 
 [package.source]
 type = "git"
-url = "git@gitlab.esat.kuleuven.be:premises/nilmtk-base.git"
+url = "https://github.com/ejpalacios/nilmtk-base.git"
 reference = "HEAD"
-resolved_reference = "01202287d0ee6d1ac1dd8ebdf69d4650a860671d"
+resolved_reference = "f8993104d7cd0df528aead99e2cfb6c1476b0bb3"
 
 [[package]]
 name = "nose"
@@ -1343,4 +1343,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.12"
-content-hash = "ae8e91cf5b8026fdea2f2618b1fae70831ced306325145c67b189e291c4a570a"
+content-hash = "693da0c1e71517ed66cb1a9482615b549900052a08427158bea21059fc5c8507"
